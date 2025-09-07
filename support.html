@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sticker App 支持 / Support</title>
+<meta name="description" content="Sticker App 技术支持与常见问题 / Support & FAQ" />
+<meta name="robots" content="index,follow" />
+<style>
+:root { --bg:#fafafa; --panel:#ffffff; --border:#e4e2dd; --accent:#2563eb; --accent2:#f97316; --text:#1f272e; --muted:#64748b; color-scheme:light dark; }
+html { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.55; }
+body { margin:0; background:var(--bg); color:var(--text); }
+header { padding:2.2rem 1.2rem 1.2rem; background:linear-gradient(135deg,#eef6ff,#fff); border-bottom:1px solid var(--border); }
+main { max-width:980px; margin:0 auto; padding:2rem 1.25rem 4rem; }
+footer { max-width:980px; margin:0 auto; padding:2rem 1.25rem 3rem; font-size:.8rem; color:var(--muted); }
+ h1 { margin:.2rem 0 0.4rem; font-size:clamp(2rem,3.4vw,2.6rem); line-height:1.15; }
+ h2 { margin:2.2rem 0 .9rem; font-size:1.35rem; border-left:5px solid var(--accent); padding-left:.55rem; }
+ h3 { margin:1.8rem 0 .6rem; font-size:1.05rem; font-weight:600; letter-spacing:.5px; color:var(--accent2); }
+ p { margin:0 0 1rem; }
+ a { color:var(--accent); text-decoration:none; }
+ a:hover { text-decoration:underline; }
+ code { background:#f1f5f9; padding:.15rem .45rem; border-radius:4px; font-size:.85em; }
+ ul { margin:0 0 1.1rem 1.2rem; padding:0; }
+ .grid { display:grid; gap:1.4rem; }
+ .panel { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:1.35rem 1.25rem 1.6rem; box-shadow:0 4px 10px -4px rgba(0,0,0,.06); }
+ .tag { display:inline-block; font-size:.6rem; font-weight:600; padding:.25rem .55rem; border-radius:999px; background:var(--accent); color:#fff; letter-spacing:.5px; margin-left:.5rem; }
+ .badge { background:var(--accent2); color:#fff; border-radius:6px; font-size:.62rem; padding:.25rem .5rem; vertical-align:middle; }
+ .note { border:1px solid var(--accent2); background:#fff5ed; padding:.8rem 1rem; border-radius:14px; font-size:.9rem; }
+ .twocol { display:grid; gap:1.2rem; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); }
+ details { border:1px solid var(--border); border-radius:12px; padding:.9rem 1rem; background:#ffffff; }
+ details + details { margin-top:.75rem; }
+ summary { cursor:pointer; font-weight:600; }
+ .lang { font-size:.66rem; font-weight:600; letter-spacing:.5px; padding:.2rem .5rem; background:#e2e8f0; border-radius:4px; margin-left:.5rem; }
+ @media (prefers-color-scheme:dark) { :root { --bg:#121415; --panel:#1c2023; --border:#30363d; --text:#eef2f5; --muted:#94a3b8; }
+  header { background:linear-gradient(135deg,#1e2935,#161c22); }
+  code { background:#1e2935; }
+  details { background:#1c2023; }
+  .note { background:#2a211a; }
+  .lang { background:#29323a; }
+ }
+</style>
+</head>
+<body>
+<header>
+  <h1>Sticker App 支持 / Support</h1>
+  <p style="max-width:720px; font-size:0.95rem; color:var(--muted);">若你在使用过程中遇到问题，可先查看下方常见问答；未解决请通过邮箱联系我们。 / If you run into issues, review the FAQ below; if unresolved, contact us by email.</p>
+  <p><strong>联系邮箱 / Contact Email:</strong> <span style="font-family:monospace;">【support@example.com】</span></p>
+</header>
+<main>
+  <section class="panel" id="quick">
+    <h2>快速操作 / Quick Actions</h2>
+    <ul>
+      <li><strong>恢复内购 / Restore Purchase:</strong> 打开应用 → 自定义分类被锁时触发购买流程界面 → 选择“恢复” (如果有按钮)。 / If entitlement lost, trigger purchase screen and use "Restore" (if shown) or re‑purchase (Apple 不重复扣费 / you won't be charged twice).</li>
+      <li><strong>同步到小组件 / Widget Refresh:</strong> 创建或删除贴纸后等待 ~15 秒；必要时长按桌面进入编辑 → 移除并重新添加组件。 / After adding/deleting stickers wait ~15s; optionally re‑add the widget.</li>
+      <li><strong>删除分类 / Delete Custom Category:</strong> 分类管理界面长按或使用管理模式 → 选择删除 → 贴纸会移动到“未分类”。 / Long‑press or use manage mode → delete; stickers move to "Uncategorized".</li>
+      <li><strong>位置未记录 / Location Missing:</strong> iOS 设置 → 隐私与安全性 → 定位服务 → 找到 App → 设为 “使用 App 期间” 并开启“精确位置”。 / Settings → Privacy → Location → set to While Using & Precise.</li>
+      <li><strong>贴纸不见了 / Lost Stickers:</strong> 确认未卸载应用；检查是否更换设备且无转移；当前版本不做云同步。 / Ensure app not deleted; device migration not supported yet (no cloud sync).</li>
+    </ul>
+  </section>
+
+  <section class="panel" id="faq">
+    <h2>常见问题 / FAQ</h2>
+    <details>
+      <summary>1. 内购已付费却再次提示购买 / Already purchased but asked to pay again</summary>
+      <p><strong>ZH:</strong> 这是 Apple 正常的重复购买界面；确认 Apple ID 后系统会显示“已购买”并恢复权限，不会二次扣费。请确保使用原来的 Apple ID。<br><strong>EN:</strong> iOS may show the purchase sheet again; after confirming Apple ID it will say “You’ve already purchased this” and restore access without double‑charging.</p>
+    </details>
+    <details>
+      <summary>2. 小组件不更新 / Widget not updating</summary>
+      <p><strong>ZH:</strong> 先打开主应用确保最近前台过；创建/删除贴纸后等待 10–30 秒。若仍不更新：重启设备或移除再添加组件。<br><strong>EN:</strong> Open the main app (foreground refresh), wait 10–30s after changes. If still stale: reboot device or remove/re‑add the widget.</p>
+    </details>
+    <details>
+      <summary>3. 为什么需要位置权限 / Why ask for location?</summary>
+      <p><strong>ZH:</strong> 仅在你拍摄贴纸并允许时，用一次性定位生成可读地址，帮助回忆创作场景，不上传服务器。可在设置中关闭。<br><strong>EN:</strong> Used only (once) at capture—reverse geocoding for context. Not uploaded. You can disable in Settings anytime.</p>
+    </details>
+    <details>
+      <summary>4. 如何彻底删除我的数据 / How to delete my data?</summary>
+      <p><strong>ZH:</strong> 删除贴纸即删除对应元数据；卸载应用即移除所有本地数据。<br><strong>EN:</strong> Deleting a sticker removes its metadata; uninstalling the app removes all local data.</p>
+    </details>
+    <details>
+      <summary>5. 为什么没有云同步 / No cloud sync?</summary>
+      <p><strong>ZH:</strong> 当前版本专注本地性能与隐私。后续若增加同步，会更新隐私政策。<br><strong>EN:</strong> Focus on on‑device privacy first; if sync arrives later, policy will update.</p>
+    </details>
+    <details>
+      <summary>6. 分类或贴纸操作延迟 / Slow category or sticker operations</summary>
+      <p><strong>ZH:</strong> 大量贴纸时首次分类加载需要额外时间；保持应用前台以完成缓存构建。<br><strong>EN:</strong> Large libraries may need a first‑time metadata pass; keep the app foreground to finish caching.</p>
+    </details>
+  </section>
+
+  <section class="panel" id="contact">
+    <h2>联系开发者 / Contact</h2>
+    <p><strong>邮箱 / Email:</strong> smastrg@gmail.com</p>
+    <p><strong>提交信息 / Provide:</strong></p>
+    <ul>
+      <li>App 版本 / App version (在设置或 TestFlight 构建号)</li>
+      <li>设备型号 + iOS 版本 / Device model + iOS version</li>
+      <li>复现步骤（若是崩溃问题尽量提供截图或屏幕录制） / Reproduction steps (screenshots/video if possible)</li>
+    </ul>
+    <p class="note"><strong>隐私 / Privacy:</strong> 请不要发送敏感个人信息或完整位置信息；若需要排查位置类问题，仅提供模糊城市级描述即可。 / Do not send sensitive personal data or full addresses; city‑level context is enough if investigating location issues.</p>
+  </section>
+
+  <section class="panel" id="legal">
+    <h2>法律与政策 / Legal & Policy</h2>
+    <p>隐私政策 / Privacy Policy: <a href="PRIVACY_POLICY.html">PRIVACY_POLICY.html</a></p>
+    <p>© 2025 Sticker App. All rights reserved.</p>
+  </section>
+</main>
+<footer>
+  <p>Sticker App Support · Updated: <span id="updated">2025-09-07</span></p>
+</footer>
+</body>
+</html>
